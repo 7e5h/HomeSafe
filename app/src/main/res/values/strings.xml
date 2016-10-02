@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Demo Maps</string>
+    <string name="title_activity_maps">Map</string>
+    <color name="t15">#D7D7D7</color>
+</resources>

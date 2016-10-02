@@ -1,0 +1,69 @@
+<LinearLayout xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content">
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Search"
+            android:id="@+id/Bsearch"
+            android:layout_gravity="end"
+            android:onClick="onSearch" />
+        <EditText
+            android:layout_width="183dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/TFaddress"
+            android:hint="Search address"
+            android:textAlignment="center"
+            android:layout_toRightOf="@id/Bsearch"/>
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Set"
+            android:id="@+id/start"
+            android:layout_toEndOf="@id/TFaddress"
+            android:onClick="onSet" />
+        <EditText
+            android:layout_width="183dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/Bsearch"
+            android:hint="phone number"
+            android:inputType="phone"
+            android:id="@+id/phone" />
+        <EditText
+            android:layout_width="183dp"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/phone"
+            android:layout_below="@id/Bsearch"
+            android:hint="message to send"
+            android:id="@+id/words" />
+</RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <fragment
+            android:layout_width="389dp"
+        android:layout_height="428dp" android:id="@+id/map" tools:context=".MapsActivity"
+        android:name="com.google.android.gms.maps.SupportMapFragment" />
+
+
+        <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+    </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
