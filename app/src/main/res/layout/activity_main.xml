@@ -11,31 +11,6 @@ android:paddingTop="@dimen/activity_vertical_margin"
     android:background="@drawable/bg"
 tools:context="com.techacademy.demomaps.MainActivity">
 
-<Button
-    android:text="Location"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_alignParentTop="true"
-    android:layout_alignParentRight="true"
-    android:layout_alignParentEnd="true"
-    android:onClick="mapView"
-    android:id="@+id/button" />
-
-<EditText
-    android:layout_width="wrap_content"
-    android:layout_height="40dp"
-    android:inputType="textPersonName"
-    android:background="@color/t15"
-    android:ems="10"
-    android:layout_below="@+id/numberField"
-    android:layout_alignParentLeft="true"
-    android:layout_alignParentStart="true"
-    android:layout_marginTop="32dp"
-    android:id="@+id/messageField"
-    android:layout_alignParentRight="true"
-    android:layout_alignParentEnd="true"
-    android:hint="Message to be sent" />
-
     <Button
     android:text="Send"
     android:layout_width="wrap_content"
@@ -49,23 +24,61 @@ tools:context="com.techacademy.demomaps.MainActivity">
 
     <EditText
         android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:inputType="phone"
+        android:ems="10"
+android:layout_below="@+id/delayField"
+        android:layout_marginTop="20dp"
+        android:id="@+id/numberField"
+        android:hint="Phone Number"
+        android:background="@color/t15"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:text="Location"
+        android:layout_below="@id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:onClick="mapView"
+        android:id="@+id/button"
+        android:layout_alignParentEnd="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
         android:background="@color/t15"
         android:layout_height="40dp"
         android:inputType="datetime"
         android:ems="10"
         android:id="@+id/delayField"
+        android:layout_marginTop="20dp"
         android:hint="Delay (Minutes)"
-        android:layout_alignParentTop="true"
+        android:layout_below="@+id/title"
         android:layout_alignParentStart="true" />
 
     <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="40dp"
-        android:inputType="phone"
-        android:ems="10"
-        android:id="@+id/numberField"
-        android:hint="Phone Number"
-        android:background="@color/t15"
-        android:layout_alignBottom="@+id/sendButton"
+    android:layout_width="wrap_content"
+    android:layout_height="40dp"
+    android:inputType="textPersonName"
+    android:background="@color/t15"
+    android:ems="10"
+        android:layout_below="@id/numberField"
+        android:layout_marginTop="20dp"
+    android:id="@+id/messageField"
+        android:hint="Message to be sent"
         android:layout_alignParentStart="true" />
+
+    <TextView
+        android:text="Send a Delayed Message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="80"
+        android:background="@color/t15"
+        android:id="@+id/title"
+        android:textSize="25sp"
+        android:textColor="@color/abc_input_method_navigation_guard"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+
+
 </RelativeLayout>
