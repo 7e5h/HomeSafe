@@ -142,6 +142,7 @@ public class MapsActivity extends FragmentActivity {
         EditText location_tf = (EditText)findViewById(R.id.TFaddress);
         String location = location_tf.getText().toString();
         List<Address> addressList = null;
+        Button button = (Button)findViewById(R.id.start);
         if(location != null || !location.equals(""))
         {
             Geocoder geocoder = new Geocoder(this);
@@ -153,13 +154,15 @@ public class MapsActivity extends FragmentActivity {
                 e.printStackTrace();
             }
             if(addressList.size()>0) {
+                button.setBackgroundColor(0xff99cc00);
+                button.setText("Message will be sent on arrival");
                 Address address = addressList.get(0);
                 LatLng latLng = new LatLng(address.getLatitude(), address.getLongitude());
                 destLng = address.getLongitude();
                 destLat = address.getLatitude();
                 mMap.addMarker(new MarkerOptions().position(latLng).title("Marker"));
                 mMap.moveCamera(CameraUpdateFactory.newLatLng(latLng));
-                Toast.makeText(getApplicationContext(),"Destination Set, number will be notified on arrival",Toast.LENGTH_LONG).show();
+                //Toast.makeText(getApplicationContext(),"Destination Set, text will be sent on arrival",Toast.LENGTH_LONG).show();
             }
             else
                 Log.e("error","no results from geocoder");

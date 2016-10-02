@@ -28,8 +28,9 @@
             style="?android:attr/buttonStyleSmall"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="Set"
+            android:text="Send on Arrival"
             android:id="@+id/start"
+            android:textSize="11dp"
             android:layout_toEndOf="@id/TFaddress"
             android:onClick="onSet" />
         <EditText
